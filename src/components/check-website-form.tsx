@@ -5,32 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { AnalysisDialog } from "@/components/analysis-dialog"
 import { cn } from "@/lib/utils"
-
-// Updated loading animation for rotating circle
-const loadingStyles = `
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  .loading-spinner {
-    position: relative;
-  }
-
-  .loading-spinner::after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: calc(50% - 8px);
-    left: calc(50% - 8px);
-    border: 2px solid transparent;
-    border-top-color: currentColor;
-    border-radius: 50%;
-    animation: spin 0.6s linear infinite;
-  }
-`
+import "@/styles/loading-spinner.css"
 
 export function CheckWebsiteForm() {
   const [url, setUrl] = useState("")
@@ -72,7 +47,6 @@ export function CheckWebsiteForm() {
 
   return (
     <>
-      <style>{loadingStyles}</style>
       <form onSubmit={handleSubmit} className="flex gap-2">
         <Input
           type="url"

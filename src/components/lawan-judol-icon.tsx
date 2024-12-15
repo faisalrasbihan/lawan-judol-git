@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface LawanJudolIconProps extends React.SVGProps<SVGSVGElement> {}
-
-export const LawanJudolIcon: React.FC<LawanJudolIconProps> = (props) => {
+export const LawanJudolIcon = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      version="1.1"
-      viewBox="0.00 0.00 1024.00 1024.00"
+      ref={ref}
+      viewBox="0 0 1000 1000"
       {...props}
     >
       <g strokeWidth="2.00" fill="none" strokeLinecap="butt">
@@ -96,5 +96,7 @@ export const LawanJudolIcon: React.FC<LawanJudolIconProps> = (props) => {
       />
     </svg>
   );
-};
+});
+
+LawanJudolIcon.displayName = "LawanJudolIcon";
   

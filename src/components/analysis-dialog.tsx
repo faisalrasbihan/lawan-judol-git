@@ -106,7 +106,7 @@ export function AnalysisDialog({ url, onClose, analysisData }: AnalysisDialogPro
         ) : (
           <div className="space-y-4">
             <p className="text-lg text-center">
-              Thank you for your report. We've successfully logged the following information:
+              Thank you for your report. We&apos;ve successfully logged the following information:
             </p>
             <ul className="space-y-2">
               <li className="flex items-center">

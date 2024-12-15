@@ -29,13 +29,24 @@ export default function Home() {
       </header>
 
       <main className="flex-1">
-        <section className="bg-green-900 text-white py-20 px-4">
-          <div className="container mx-auto max-w-3xl text-center">
+        <section className="bg-green-900 text-white py-20 px-4 bg-texture relative">
+          <div className="container mx-auto max-w-3xl text-center relative z-10">
             <h1 className="text-3xl md:text-4xl font-bold mb-6">
               Protect Your Loved Ones from the Dangers of Illegal Gambling
             </h1>
             <p className="text-green-100 mb-8">
-              You have the power to make a difference. Join our community-driven movement to combat illegal online gambling platforms and create a safer digital environment for everyone.
+              You have the power to make a difference with{" "}
+              <a 
+                href="https://x.com/lawanjudol" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="bg-blue-500 px-2 py-1 rounded-md hover:bg-blue-600 transition-colors inline-flex items-center gap-1"
+              >
+                @LawanJudol
+              </a>
+              , a social movement dedicated to combating illegal online gambling. Report suspicious websites and help us create a safer digital space for everyone.
+              <br /><br />
+              Join the fight. Together, we can protect our communities and build a healthier future.
             </p>
             <CheckWebsiteForm />
           </div>
