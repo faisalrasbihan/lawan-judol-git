@@ -48,7 +48,10 @@ export function AnalysisDialog({ url, onClose, analysisData }: AnalysisDialogPro
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <div className="text-sm text-muted-foreground mb-1">Website Category:</div>
-                  <Badge variant="destructive" className="rounded-md">
+                  <Badge 
+                    variant={analysisData?.website_category === 'Normal' ? 'secondary' : 'destructive'} 
+                    className="rounded-md"
+                  >
                     {analysisData?.website_category}
                   </Badge>
                 </div>
